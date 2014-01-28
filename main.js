@@ -12,7 +12,7 @@ scene.add(light2);
 var ambient = new THREE.AmbientLight(0x808080);
 scene.add(ambient);
 
-var renderer = new THREE.WebGLRenderer();
+var renderer = new THREE.WebGLRenderer({canvas:$("#example").get(0)});
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
@@ -93,7 +93,16 @@ my = new MyObj();
 my.load(p);
 }
 
+
+
+
+var gridHelper = new THREE.GridHelper( 1, 0.1 );
+gridHelper.position = new THREE.Vector3( 0, 0, 0 );
+gridHelper.rotation = new THREE.Euler( 0, 0, 0 );
+scene.add( gridHelper );
+
 camera.position.x = 0.5;
+camera.position.y = 0.1;
 camera.position.z = 0.5;
 
 function render() {
