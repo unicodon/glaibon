@@ -1,11 +1,11 @@
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.01, 1000 );
 
-var light = new THREE.DirectionalLight(0xFF00FF);
+var light = new THREE.DirectionalLight(0xFF80FF);
 light.position = new THREE.Vector3(35.577, 36.577, 35.577);
 scene.add(light);
 
-var light2 = new THREE.DirectionalLight(0xFFFF00);
+var light2 = new THREE.DirectionalLight(0xFFFF80);
 light2.position = new THREE.Vector3(-35.577, -36.577, -35.577);
 scene.add(light2);
 
@@ -32,7 +32,7 @@ parts = [
 }
 ,
 {
- position: { x:0, y:0.08, z:0.0625 }, 
+ position: { x:0, y:0.0995, z:0.0625 }, 
  parts:[
  "head01",
  "head02",
@@ -42,6 +42,29 @@ parts = [
  "head06",
  ]
 }
+,
+
+{ position: { x:0, y:0.0820, z:0.1025 },  parts:[ "chops" ] },
+
+{ position: { x:0.0, y:0.0195, z:0.0625 },  parts:[ "neck" ] },
+
+{ position: { x:0.0, y:0.0, z:0.06 },  parts:[ "LforefootA" ] },
+{ position: { x:0.0622, y:0.0, z:0.06 },  parts:[ "LforefootB" ] },
+{ position: { x:0.0622, y:-0.0695, z:0.074 },  parts:[ "LforefootC","LforefootD" ]},
+
+{ position: { x:0.0, y:0.0, z:-0.06 },  parts:[ "LhindfootA" ] },
+{ position: { x:0.0622, y:0.0, z:-0.06 },  parts:[ "LhindfootB" ] },
+{ position: { x:0.0622, y:-0.0695, z:-0.074 },  parts:[ "LhindfootC","LhindfootD" ]},
+
+{ position: { x:-0.0, y:0.0, z:0.06 },  parts:[ "RforefootA" ] },
+{ position: { x:-0.0622, y:0.0, z:0.06 },  parts:[ "RforefootB" ] },
+{ position: { x:-0.0622, y:-0.0695, z:0.074 },  parts:[ "RforefootC","RforefootD" ]},
+
+{ position: { x:-0.0, y:0.0, z:-0.06 },  parts:[ "RhindfootA" ] },
+{ position: { x:-0.0622, y:0.0, z:-0.06 },  parts:[ "RhindfootB" ] },
+{ position: { x:-0.0622, y:-0.0695, z:-0.074 },  parts:[ "RhindfootC","RhindfootD" ]},
+
+//{ position: { x:0, y:0.0820, z:0.1025 },  parts:[ "tail0, tail1" ] },
 
 ]
 
